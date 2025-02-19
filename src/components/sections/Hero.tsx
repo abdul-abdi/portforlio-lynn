@@ -23,7 +23,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="mb-8 relative"
           >
-            <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-8">
+            <div className="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 md:mb-8">
               <Image
                 src="https://avatars.githubusercontent.com/u/114350976?v=4"
                 alt="Lynn Kathomi"
@@ -50,52 +50,59 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-4 md:space-y-6"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <h1 className="text-3xl md:text-6xl font-bold mb-2 md:mb-4">
                 <span className="bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
                   Lynn Kathomi
                 </span>
               </h1>
               
-              <div className="flex flex-col items-center space-y-4">
-                <p className="text-xl md:text-2xl text-purple-200 font-medium">
-                Software Developer
+              <div className="flex flex-col items-center space-y-2 md:space-y-4">
+                <p className="text-lg md:text-2xl text-purple-200 font-medium">
+                  Software Developer
                 </p>
-                <p className="text-lg text-gray-300 max-w-2xl">
-                  Motivated IT student at Zetech University (Class of 2025), passionate about leveraging academic knowledge 
-                  to solve real-world problems. Expertise in web development, programming, and database management, 
-                  with a strong focus on continuous learning and innovation.
+                <p className="text-base md:text-lg text-gray-300 max-w-2xl px-4 md:px-0">
+                  {/* Show shorter text on mobile */}
+                  <span className="block md:hidden">
+                    IT student at Zetech University, passionate about web development, programming, and innovation.
+                  </span>
+                  {/* Show full text on desktop */}
+                  <span className="hidden md:block">
+                    Motivated IT student at Zetech University (Class of 2025), passionate about leveraging academic knowledge 
+                    to solve real-world problems. Expertise in web development, programming, and database management, 
+                    with a strong focus on continuous learning and innovation.
+                  </span>
                 </p>
               </div>
 
-              <div className="flex items-center justify-center gap-6 py-4">
+              <div className="flex items-center justify-center gap-4 md:gap-6 py-2 md:py-4">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="flex gap-6"
+                  className="flex gap-4 md:gap-6"
                 >
                   <div className="flex flex-col items-center">
-                    <FaCode className="w-6 h-6 text-purple-400 mb-2" />
-                    <span className="text-sm text-gray-400">Web Dev</span>
+                    <FaCode className="w-5 h-5 md:w-6 md:h-6 text-purple-400 mb-1 md:mb-2" />
+                    <span className="text-xs md:text-sm text-gray-400">Web Dev</span>
                   </div>
                   <div className="flex flex-col items-center">
-                    <FaLaptopCode className="w-6 h-6 text-pink-400 mb-2" />
-                    <span className="text-sm text-gray-400">Programming</span>
+                    <FaLaptopCode className="w-5 h-5 md:w-6 md:h-6 text-pink-400 mb-1 md:mb-2" />
+                    <span className="text-xs md:text-sm text-gray-400">Programming</span>
                   </div>
                   <div className="flex flex-col items-center">
-                    <FaServer className="w-6 h-6 text-purple-400 mb-2" />
-                    <span className="text-sm text-gray-400">Databases</span>
+                    <FaServer className="w-5 h-5 md:w-6 md:h-6 text-purple-400 mb-1 md:mb-2" />
+                    <span className="text-xs md:text-sm text-gray-400">Databases</span>
                   </div>
                 </motion.div>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
                 <motion.a
                   href="#contact"
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full 
-                    hover:opacity-90 transition-opacity font-medium w-full md:w-auto"
+                  className="px-6 md:px-8 py-2.5 md:py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full 
+                    hover:opacity-90 transition-opacity font-medium w-full md:w-auto text-sm md:text-base"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -103,8 +110,8 @@ const Hero = () => {
                 </motion.a>
                 <motion.a
                   href="#projects"
-                  className="px-8 py-3 border border-purple-500/20 rounded-full 
-                    hover:bg-purple-500/10 transition-colors font-medium w-full md:w-auto
+                  className="px-6 md:px-8 py-2.5 md:py-3 border border-purple-500/20 rounded-full 
+                    hover:bg-purple-500/10 transition-colors font-medium w-full md:w-auto text-sm md:text-base
                     backdrop-blur-sm"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -113,7 +120,7 @@ const Hero = () => {
                 </motion.a>
               </div>
 
-              <div className="flex items-center justify-center gap-6 pt-6">
+              <div className="flex items-center justify-center gap-6 pt-4 md:pt-6">
                 <motion.a
                   href="https://github.com/lynnkathomi"
                   target="_blank"
@@ -121,7 +128,7 @@ const Hero = () => {
                   className="text-gray-400 hover:text-purple-400 transition-colors group"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <FaGithub className="w-6 h-6" />
+                  <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
                   <span className="text-xs opacity-0 group-hover:opacity-100 absolute -bottom-4 left-1/2 transform -translate-x-1/2 transition-opacity">GitHub</span>
                 </motion.a>
                 <motion.a
@@ -131,7 +138,7 @@ const Hero = () => {
                   className="text-gray-400 hover:text-purple-400 transition-colors group"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <FaLinkedin className="w-6 h-6" />
+                  <FaLinkedin className="w-5 h-5 md:w-6 md:h-6" />
                   <span className="text-xs opacity-0 group-hover:opacity-100 absolute -bottom-4 left-1/2 transform -translate-x-1/2 transition-opacity">LinkedIn</span>
                 </motion.a>
               </div>
