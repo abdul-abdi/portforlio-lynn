@@ -60,7 +60,7 @@ const Hero = () => {
               
               <div className="flex flex-col items-center space-y-4">
                 <p className="text-xl md:text-2xl text-purple-200 font-medium">
-                  IT Student & Aspiring Software Developer
+                Software Developer
                 </p>
                 <p className="text-lg text-gray-300 max-w-2xl">
                   Motivated IT student at Zetech University (Class of 2025), passionate about leveraging academic knowledge 
